@@ -13,10 +13,11 @@ pipeline {
             git 'https://github.com/Andyatletic/TicTacTest2.git'
 
             // Run Maven on a Unix agent.
-            //sh "mvn -Dmaven.test.failure.ignore=true clean package"
-            bat "mvn test"
+            sh "mvn test"
+            sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            //bat "mvn test"
             // To run Maven on a Windows agent, use
-            bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            //bat "mvn -Dmaven.test.failure.ignore=true clean package"
             
             
          }
