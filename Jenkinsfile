@@ -9,9 +9,10 @@ pipeline {
    stages {
       stage('Build') {
          steps {
-            // Get some code from a GitHub repository
-            git 'https://github.com/Andyatletic/TicTacTest2.git'
-
+            // Repositorio git publico con mi practica
+            //git 'https://github.com/Andyatletic/TicTacTest2.git'
+            //Supongo que seria así para acceder, no he dado sistemas operativos
+            sh "cd ais/AndresQuintanar/"
             // Run Maven on a Unix agent.
             sh "mvn -Dmaven.test.failure.ignore=true clean package"
             // To run Maven on a Windows agent, use
